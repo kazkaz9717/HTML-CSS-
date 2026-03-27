@@ -1,0 +1,314 @@
+/* ===================== */
+/* リセット */
+/* ===================== */
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #000;
+}
+
+/* ===================== */
+/* スマホ用画像非表示 */
+/* ===================== */
+@media only screen and (min-width: 769px) {
+  .sp-images {
+    display: none;
+  }
+}
+
+/* ===================== */
+/* ヘッダー */
+/* ===================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: relative;
+  z-index: 100;
+  background: #fff;
+}
+
+/* ロゴ */
+.logo-img {
+  width: 185px;
+  height: auto;
+}
+
+.logo-img:hover {
+  opacity: 0.7;
+}
+
+/* ===================== */
+/* ナビ（PC） */
+/* ===================== */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav a:hover {
+  opacity: 0.7;
+}
+
+/* ボタン */
+.btn {
+  background: #f7931e;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn-small {
+  font-size: 12px;
+  padding: 12px 22px;
+  border-radius: 25px;
+}
+
+/* ===================== */
+/* ハンバーガー */
+/* ===================== */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.hamburger span {
+  height: 3px;
+  background: #000;
+  display: block;
+  border-radius: 2px;
+}
+
+/* ===================== */
+/* ヒーロー */
+/* ===================== */
+.hero {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+
+/* 画像 */
+.hero-images img {
+  position: absolute;
+}
+
+.malemodel {
+  width: 800px;
+  top: -80px;
+  right: 0;
+  z-index: 40;
+}
+
+.triangle-upperleft {
+  width: 280px;
+  top: 0;
+  left: 0;
+  z-index: 30;
+}
+
+.triangle-lowerright {
+  width: 320px;
+  bottom: 0;
+  right: 0;
+  z-index: 30;
+}
+
+.oval {
+  top: 120px;
+  left: -60px;
+  z-index: 30;
+}
+
+.badge {
+  top: 150px;
+  left: 600px;
+  z-index: 50;
+}
+
+/* テキスト */
+.hero-text {
+  position: absolute;
+  top: 230px;
+  left: 150px;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 60;
+}
+
+
+/* ボタン（大） */
+.btn-big {
+  position: absolute;
+  top: 450px;
+  left: 150px;
+  padding: 22px 140px;
+  border-radius: 50px;
+  font-size: 16px;
+  z-index: 60;
+}
+
+/* 調査 */
+.survey-results {
+  position: absolute;
+  top: 540px;
+  left: 150px;
+  font-size: 11px;
+  color: #888;
+  z-index: 60;
+}
+
+/* ===================== */
+/* タブレット */
+/* ===================== */
+@media only screen and (max-width: 1024px) {
+
+  /* ハンバーガー表示 */
+  .hamburger {
+    display: flex;
+  }
+
+  /* PCメニュー非表示 */
+  .menu {
+    position: fixed;
+    top: 65px; 
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    padding-top: 5%;
+    background-color: rgba(30, 30, 30, 0.9);
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  /* 開いた状態 */
+  #menu-toggle:checked ~ .menu {
+    right: 0;
+  }
+
+
+  /* ナビ縦並び */
+  .nav ul {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .nav a {
+    font-size: 15px;
+    color: white;
+    letter-spacing: 5px;
+  }
+  
+  .nav span {
+    color: #f7931e;
+    font-size: 10px;
+  }
+
+  .btn-small {
+    padding: 20px 50px;
+  }
+}
+
+
+/* ===================== */
+/* スマホ */
+/* ===================== */
+
+@media only screen and (max-width: 768px) {
+  /* 画像非表示 */
+  .hero-images {
+    display: none;
+  }
+
+    /* 画像表示 */
+  .sp-hero-images {
+    width: 100%;
+  }
+
+  /* 位置調整 */
+  .hero {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+
+/* バッジ */
+  .sp-badge {
+    position: absolute;
+    width: 100px;
+    top: 60%;
+    left: 300px;
+  }
+
+
+/* テキスト */
+.hero-text {
+  position: absolute;
+  top: 60%;
+  left: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 60;
+}
+
+/* ボタン（大） */
+.btn-big {
+  position: absolute;
+  top: 80%;
+  left: 20px;
+  padding: 22px 140px;
+  border-radius: 50px;
+  font-size: 16px;
+  z-index: 60;
+}
+
+/* 調査 */
+.survey-results {
+  position: absolute;
+  top: 90%;
+  left: 20px;
+  font-size: 12px;
+  color: #888;
+  z-index: 60;
+}
+}
+
+
